@@ -3,7 +3,6 @@ package com.yalantis.ucrop.sample;
 import android.annotation.TargetApi;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Animatable;
 import android.graphics.drawable.Drawable;
@@ -26,6 +25,13 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.ColorInt;
+import androidx.annotation.DrawableRes;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
+
 import com.yalantis.ucrop.UCrop;
 import com.yalantis.ucrop.UCropActivity;
 import com.yalantis.ucrop.UCropFragment;
@@ -34,13 +40,6 @@ import com.yalantis.ucrop.UCropFragmentCallback;
 import java.io.File;
 import java.util.Locale;
 import java.util.Random;
-
-import androidx.annotation.ColorInt;
-import androidx.annotation.DrawableRes;
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.widget.Toolbar;
-import androidx.core.content.ContextCompat;
 
 /**
  * Created by Oleksii Shliama (https://github.com/shliama).
@@ -338,19 +337,18 @@ public class SampleActivity extends BaseActivity implements UCropFragmentCallbac
         options.setCircleDimmedLayer(true);
         options.setShowCropFrame(false);
         options.setCropGridStrokeWidth(20);
-        */
         options.setCropGridColor(Color.GREEN);
-        options.setCropGridColumnCount(4);
-        /*
+        options.setCropGridColumnCount(2);
         options.setCropGridRowCount(1);
-        options.setToolbarCropDrawable(R.drawable.your_crop_icon);
-        options.setToolbarCancelDrawable(R.drawable.your_cancel_icon);
+        options.setToolbarCropDrawable(R.drawable.avt);
+        options.setToolbarCancelDrawable(R.drawable.ucrop_ic_rotate);
 
         // Color palette
         options.setToolbarColor(ContextCompat.getColor(this, R.color.your_color_res));
+
         options.setStatusBarColor(ContextCompat.getColor(this, R.color.your_color_res));
         options.setToolbarWidgetColor(ContextCompat.getColor(this, R.color.your_color_res));
-        options.setRootViewBackgroundColor(ContextCompat.getColor(this, R.color.your_color_res));
+        options.setRootViewBackgroundColor(ContextCompat.getColor(this, R.color.white));
         options.setActiveControlsWidgetColor(ContextCompat.getColor(this, R.color.your_color_res));
 
         // Aspect ratio options
@@ -360,8 +358,12 @@ public class SampleActivity extends BaseActivity implements UCropFragmentCallbac
             new AspectRatio("RATIO", CropImageView.DEFAULT_ASPECT_RATIO, CropImageView.DEFAULT_ASPECT_RATIO),
             new AspectRatio("SO", 16, 9),
             new AspectRatio("ASPECT", 1, 1));
-        options.withAspectRatio(CropImageView.DEFAULT_ASPECT_RATIO, CropImageView.DEFAULT_ASPECT_RATIO);
+        options.withAspectRatio(CropImageView.SOURCE_IMAGE_ASPECT_RATIO, CropImageView.SOURCE_IMAGE_ASPECT_RATIO);
         options.useSourceImageAspectRatio();
+        */
+
+        /*
+
 
        */
 
